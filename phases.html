@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Phases</title>
+</head>
+<body>
+
+<div id="outer" style="padding:40px; background:#f8c;">
+  OUTER
+  <div id="middle" style="padding:40px; background:#8cf;">
+    MIDDLE
+    <button id="inner">Click Me</button>
+  </div>
+</div>
+
+<script>
+const outer = document.getElementById("outer");
+const middle = document.getElementById("middle");
+const inner = document.getElementById("inner");
+
+// Capturing phase listeners
+outer.addEventListener("click",function(){
+    console.log("outer captaring:outer");
+
+    
+})
+
+middle.addEventListener("click", () => {
+  console.log("Capturing: MIDDLE");
+}, true);
+
+// Target phase
+inner.addEventListener("click", () => {
+  console.log("Target: BUTTON");
+});
+
+// Bubbling phase listeners
+middle.addEventListener("click", () => {
+  console.log("Bubbling: MIDDLE");
+});
+
+outer.addEventListener("click", () => {
+  console.log("Bubbling: OUTER");
+});
+</script>
+
+</body>
+</html>
