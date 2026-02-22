@@ -16,7 +16,7 @@
 
 
 
-
+let frag=document.createDocumentFragment();
 const t=performance.now();
 let div=document.createElement("div");
 
@@ -29,7 +29,7 @@ div.appendChild(para);
 
 }
 
-document.body.appendChild(div);
+frag.document.body.appendChild(div);
 const t1=performance.now();
 
 console.log(t-t1);
