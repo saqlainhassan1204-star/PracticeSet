@@ -1,3 +1,6 @@
+const t1=performance.now();
+
+
 function palindrome(num){
     let o=num;
     reverse=0;
@@ -12,3 +15,8 @@ return o===reverse;
 }
 
 console.log(palindrome(121));
+
+const t2 =performance.now();
+
+
+console.log("Total" + (t2-t1))
