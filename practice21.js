@@ -8,8 +8,6 @@ let firstpromise=new Promise((resolve,reject) =>{
    resolve();
 });
 
-
-
 let secondPromise=new Promise((resolve,reject) => {
     let success=true;
     if (success){
@@ -18,7 +16,6 @@ let secondPromise=new Promise((resolve,reject) => {
     else{
          reject("Erorr");
     }
-    
 })
 secondPromise.then(message =>{
 console.log("Fullfiled ka mesage"+ message);
