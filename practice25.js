@@ -17,6 +17,7 @@ function Delay(){
         });
 
 }
+Delay();
 
 async function Display(){
     let result=await Delay();
