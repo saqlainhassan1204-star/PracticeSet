@@ -1,11 +1,16 @@
-function bankAccoun(){
-    let privatebalace=45;
+function Acoount(initialbalance){
+let balance=initialbalance;
 
-    return function(){
-        console.log(privatebalace);
-
+return {
+    deposit:function(amount){
+        balance+=amount;
+    },
+    getbalance:function(){
+        console.log(balance);
     }
-
 }
-let balance=bankAccoun();
-balance();
+}
+
+let account=Acoount(100);
+account.deposit(33);
+account.getbalance();
