@@ -4,17 +4,15 @@ function payment(success){
     
 return new Promise((resolve,reject)=>{
 setTimeout(()=>{
-success? resolve("payment successfull")
-:reject("PAyment fail")},4000);
+success? resolve("Payment Success")
+:reject("Failed")},4000);
 
 });
-
-
 }
 
 async function checkout(){
     try{
-let check=await payment(true);
+let check=await payment(false);
 console.log(check);
     }
     catch(e){
